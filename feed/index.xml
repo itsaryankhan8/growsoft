@@ -12,7 +12,7 @@
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Sun, 22 Sep 2024 04:02:41 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 22 Sep 2024 17:01:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
@@ -20,7 +20,7 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=6.6.2</generator>
 	<item>
-		<title>this is a blog</title>
+		<title>Test Blog 1</title>
 		<link>./../2024/09/22/this-is-a-blog/index.html</link>
 					<comments>./../2024/09/22/this-is-a-blog/index.html#respond</comments>
 		
@@ -40,7 +40,7 @@
 		
 			</item>
 		<item>
-		<title>Hello world!</title>
+		<title>Test Blog 2</title>
 		<link>./../2024/09/20/hello-world/index.html</link>
 					<comments>./../2024/09/20/hello-world/index.html#comments</comments>
 		

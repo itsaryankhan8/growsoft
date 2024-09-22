@@ -7,11 +7,11 @@
 	>
 <channel>
 	<title>
-	Comments on: this is a blog	</title>
+	Comments on: Test Blog 1	</title>
 	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
 	<link>./../index.html</link>
 	<description></description>
-	<lastBuildDate>Sun, 22 Sep 2024 03:58:50 +0000</lastBuildDate>
+	<lastBuildDate>Sun, 22 Sep 2024 17:01:16 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
