@@ -1,50 +1,37 @@
 <IfModule mod_expires.c>
-    # Enable expiration headers
     ExpiresActive On
 
-    # Default expiration time for different file types
-    # Images
+    # Set caching for images to 1 year
+    ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
 
-    # CSS
+    # Set caching for CSS to 1 month
     ExpiresByType text/css "access plus 1 month"
 
-    # JavaScript
+    # Set caching for JavaScript to 1 month
     ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 month"
 
-    # HTML (can be shorter if you want regular updates)
-    ExpiresByType text/html "access plus 1 day"
-
-    # Fonts
+    # Set caching for fonts to 1 year
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
 
-    # Icon files
-    ExpiresByType image/x-icon "access plus 1 year"
-
-    # PDF
-    ExpiresByType application/pdf "access plus 1 month"
+    # Cache other static files (HTML can have a lower TTL)
+    ExpiresByType text/html "access plus 1 day"
 </IfModule>
 
-# Leverage browser caching with Cache-Control headers
 <IfModule mod_headers.c>
-    # Images
-    <FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
-        Header set Cache-Control "public, max-age=31536000"
+    # Apply Cache-Control for better efficiency
+    <FilesMatch "\.(js|css|png|jpg|jpeg|gif|webp|woff|woff2)$">
+        Header set Cache-Control "max-age=2592000, public"
     </FilesMatch>
 
-    # CSS and JS
-    <FilesMatch "\.(css|js)$">
-        Header set Cache-Control "public, max-age=2592000"
-    </FilesMatch>
-
-    # Fonts
-    <FilesMatch "\.(woff|woff2)$">
-        Header set Cache-Control "public, max-age=31536000"
+    # For static files that rarely change (e.g., fonts, images)
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|woff2|woff)$">
+        Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 </IfModule>
