@@ -9,8 +9,8 @@
 
 <channel>
 	<title>GrowSoft: Your Partner in Business Growth | GrowSoft.in</title>
-	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
-	<link>./../index.html</link>
+	<atom:link href="https://growsoft.in/feed/" rel="self" type="application/rss+xml" />
+	<link>https://growsoft.in/index.html</link>
 	<description></description>
 	<lastBuildDate>Thu, 17 Oct 2024 21:58:37 +0000</lastBuildDate>
 	<language>en-US</language>
